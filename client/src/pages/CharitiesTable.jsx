@@ -21,7 +21,7 @@ function CharitiesTable() {
 
   const fetchCharities = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/charities');
+      const res = await axios.get('https://golf-charity-frontend-r9tw.onrender.com/api/charities');
       setCharities(res.data);
     } catch (error) {
       toast.error('Failed to load charities');
@@ -37,7 +37,7 @@ function CharitiesTable() {
 
   const handleAddCharity = async () => {
     try {
-      await axios.post('http://localhost:5000/api/charities', formData);
+      await axios.post('https://golf-charity-frontend-r9tw.onrender.com/api/charities', formData);
 
       toast.success('Charity added successfully');
 
@@ -55,7 +55,7 @@ function CharitiesTable() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/charities/${id}`);
+      await axios.delete(`https://golf-charity-frontend-r9tw.onrender.com/api/charities/${id}`);
       toast.success('Charity deleted successfully');
       fetchCharities();
     } catch (error) {
@@ -76,7 +76,7 @@ function CharitiesTable() {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `http://localhost:5000/api/charities/${editingId}`,
+        `https://golf-charity-frontend-r9tw.onrender.com/api/charities/${editingId}`,
         formData
       );
 

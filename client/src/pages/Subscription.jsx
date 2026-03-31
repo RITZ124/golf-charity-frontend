@@ -10,7 +10,7 @@ function Subscription() {
   const handleCheckout = async () => {
     try {
       await axios.post(
-        'http://localhost:5000/api/subscription/save',
+        'https://golf-charity-frontend-r9tw.onrender.com/api/subscription/save',
         {
           user_id: user.id,
           plan_type: planType,
@@ -20,7 +20,7 @@ function Subscription() {
       );
 
       const res = await axios.post(
-        'http://localhost:5000/api/payment/create-checkout-session',
+        'https://golf-charity-frontend-r9tw.onrender.com/api/payment/create-checkout-session',
         {
           planType
         }

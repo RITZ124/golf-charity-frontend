@@ -22,7 +22,7 @@ function CharityDetails() {
   const fetchCharity = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/charities/${id}`
+        `https://golf-charity-frontend-r9tw.onrender.com/api/charities/${id}`
       );
 
       setCharity(res.data.charity);

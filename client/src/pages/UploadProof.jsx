@@ -30,7 +30,7 @@ const fetchProofs = async () => {
     const token = localStorage.getItem('token');
 
     const res = await axios.get(
-      `http://localhost:5000/api/winners/user/${user.id}`,
+      `https://golf-charity-frontend-r9tw.onrender.com/api/winners/user/${user.id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`
@@ -74,7 +74,7 @@ const handleUpload = async () => {
     const imageUrl = data.publicUrl;
 
     await axios.post(
-      'http://localhost:5000/api/winners/upload-proof',
+      'https://golf-charity-frontend-r9tw.onrender.com/api/winners/upload-proof',
       {
         draw_entry_id: proofs[0]?.draw_entry_id,
         image_url: imageUrl

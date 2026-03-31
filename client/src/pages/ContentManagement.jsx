@@ -27,7 +27,7 @@ function ContentManagement() {
   const fetchContent = async () => {
     try {
       const res = await axios.get(
-        'http://localhost:5000/api/admin/content',
+        'https://golf-charity-frontend-r9tw.onrender.com/api/admin/content',
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -91,7 +91,7 @@ function ContentManagement() {
       setLoading(true);
 
       await axios.post(
-        'http://localhost:5000/api/admin/content',
+        'https://golf-charity-frontend-r9tw.onrender.com/api/admin/content',
         content,
         {
           headers: {
@@ -113,7 +113,7 @@ function ContentManagement() {
       setLoading(true);
 
       await axios.delete(
-        'http://localhost:5000/api/admin/content',
+        'https://golf-charity-frontend-r9tw.onrender.com/api/admin/content',
         {
           headers: {
             Authorization: `Bearer ${token}`

@@ -23,7 +23,7 @@ function DrawManagement() {
       setLoading(true);
 
       const res = await axios.post(
-        'http://localhost:5000/api/draws/run',
+        'https://golf-charity-frontend-r9tw.onrender.com/api/draws/run',
         {
           draw_mode: drawMode
         },

@@ -13,7 +13,7 @@ function FeaturedCharitiesCarousel() {
 
   const fetchCharities = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/charities');
+      const res = await axios.get('https://golf-charity-frontend-r9tw.onrender.com/api/charities');
       setCharities(res.data.slice(0, 3));
     } catch (error) {
       console.log(error);

@@ -28,7 +28,7 @@ const fetchScores = async () => {
     const token = localStorage.getItem('token');
 
     const res = await axios.get(
-      'http://localhost:5000/api/scores',
+      'https://golf-charity-frontend-r9tw.onrender.com/api/scores',
       {
         headers: {
           Authorization: `Bearer ${token}`
@@ -61,7 +61,7 @@ const handleAddScore = async () => {
     const token = localStorage.getItem('token');
 
     const res = await axios.post(
-      'http://localhost:5000/api/scores/add',
+      'https://golf-charity-frontend-r9tw.onrender.com/api/scores/add',
       {
         score: Number(score),
         score_date: new Date().toISOString().split('T')[0]

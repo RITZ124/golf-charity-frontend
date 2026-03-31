@@ -13,7 +13,7 @@ function SubscriptionsTable() {
 
   const fetchSubscriptions = async () => {
     const res = await axios.get(
-      'http://localhost:5000/api/admin/subscriptions'
+      'https://golf-charity-frontend-r9tw.onrender.com/api/admin/subscriptions'
     );
 
     setSubscriptions(res.data);

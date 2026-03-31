@@ -23,7 +23,7 @@ function WinnerVerification() {
   const fetchProofs = async () => {
     try {
       const res = await axios.get(
-        'http://localhost:5000/api/admin/pending-proofs',
+        'https://golf-charity-frontend-r9tw.onrender.com/api/admin/pending-proofs',
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -40,7 +40,7 @@ function WinnerVerification() {
   const handleApprove = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/winners/approve/${id}`,
+        `https://golf-charity-frontend-r9tw.onrender.com/api/winners/approve/${id}`,
         {},
         {
           headers: {
@@ -59,7 +59,7 @@ function WinnerVerification() {
   const handleMarkPaid = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/winners/mark-paid/${id}`,
+        `https://golf-charity-frontend-r9tw.onrender.com/api/winners/mark-paid/${id}`,
         {},
         {
           headers: {
@@ -78,7 +78,7 @@ function WinnerVerification() {
   const handleReject = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/winners/reject/${id}`,
+        `https://golf-charity-frontend-r9tw.onrender.com/api/winners/reject/${id}`,
         {},
         {
           headers: {

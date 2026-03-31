@@ -19,7 +19,7 @@ const fetchEntries = async () => {
     const token = localStorage.getItem('token');
 
     const res = await axios.get(
-      `http://localhost:5000/api/draws/user/${user.id}`,
+      `https://golf-charity-frontend-r9tw.onrender.com/api/draws/user/${user.id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`

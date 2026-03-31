@@ -15,7 +15,7 @@ function MySubscription() {
   const fetchSubscription = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/subscription/status?user_id=${user.id}`
+        `https://golf-charity-frontend-r9tw.onrender.com/api/subscription/status?user_id=${user.id}`
       );
 
       if (Array.isArray(res.data) && res.data.length > 0) {

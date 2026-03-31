@@ -14,7 +14,7 @@ function UsersTable() {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/admin/users');
+      const res = await axios.get('https://golf-charity-frontend-r9tw.onrender.com/api/admin/users');
       setUsers(res.data);
     } catch (error) {
       toast.error('Failed to load users');
@@ -23,7 +23,7 @@ function UsersTable() {
 
   const handleRoleChange = async (id, role) => {
     try {
-      await axios.put(`http://localhost:5000/api/admin/users/${id}`, {
+      await axios.put(`https://golf-charity-frontend-r9tw.onrender.com/api/admin/users/${id}`, {
         role
       });
 

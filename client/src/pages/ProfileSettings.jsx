@@ -21,7 +21,7 @@ function ProfileSettings() {
   const handleUpdateProfile = async () => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/auth/update-profile/${user.id}`,
+        `https://golf-charity-frontend-r9tw.onrender.com/api/auth/update-profile/${user.id}`,
         formData
       );
 

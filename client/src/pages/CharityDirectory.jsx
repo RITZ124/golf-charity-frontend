@@ -34,7 +34,7 @@ function CharityDirectory() {
 
   const fetchCharities = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/charities');
+      const res = await axios.get('https://golf-charity-frontend-r9tw.onrender.com/api/charities');
       const charityData = res.data.charities || [];
       setCharities(charityData);
       setFilteredCharities(charityData);
@@ -48,7 +48,7 @@ function CharityDirectory() {
   const fetchSpotlightCharity = async () => {
     try {
       const res = await axios.get(
-        'http://localhost:5000/api/charities/spotlight'
+        'https://golf-charity-frontend-r9tw.onrender.com/api/charities/spotlight'
       );
 
       setSpotlightCharity(res.data.charity);

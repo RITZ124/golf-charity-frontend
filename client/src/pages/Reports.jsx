@@ -21,7 +21,7 @@ function Reports() {
   const fetchStats = async () => {
     try {
       const res = await axios.get(
-        'http://localhost:5000/api/admin/dashboard-stats',
+        'https://golf-charity-frontend-r9tw.onrender.com/api/admin/dashboard-stats',
         {
           headers: {
             Authorization: `Bearer ${token}`

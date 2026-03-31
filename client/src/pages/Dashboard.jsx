@@ -31,7 +31,7 @@ function Dashboard() {
   const fetchDashboardData = async () => {
     try {
       const subRes = await axios.get(
-        'http://localhost:5000/api/subscription/status',
+        'https://golf-charity-frontend-r9tw.onrender.com/api/subscription/status',
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -40,7 +40,7 @@ function Dashboard() {
       );
 
       const scoreRes = await axios.get(
-        'http://localhost:5000/api/scores',
+        'https://golf-charity-frontend-r9tw.onrender.com/api/scores',
         {
           headers: {
             Authorization: `Bearer ${token}`
